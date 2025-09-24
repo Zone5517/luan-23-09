@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema Users</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Tela de login -->
+  <section id="login-section">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Usuário" required>
+      <input type="password" id="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </section>
+
+  <!-- Lista de usuários (só aparece após login) -->
+  <section id="users-section" style="display:none;">
+    <h2>Lista de Usuários</h2>
+    <div id="users-list"></div>
+    <div id="pagination"></div>
+
+    <!-- Upload de imagem -->
+    <h3>Upload de Imagem</h3>
+    <form id="upload-form" enctype="multipart/form-data">
+      <input type="file" id="file-input" accept="image/*">
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Importar o script principal (ESModules) -->
+  <script type="module" src="./ts/login.js"></script>
+</body>
+</html>
+
+  <div id="app"></div>
+
+  <!-- Scripts compilados do TypeScript -->
+  <script src="./login.js"></script>
+  <script src="./users.js"></script>
+  <script src="./upload.js"></script>
+  <script src="./token.js"></script>
+</body>
+</html>
